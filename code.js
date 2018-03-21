@@ -47,6 +47,7 @@
     window.Asc.plugin.init = function(text)
     {
 		document.getElementById("textareaIR").value = _placeholderInsert_Replace;
+	    	alert(_placeholderInsert_Replace);
 		document.getElementById("textareaR").value = _placeholderRemove;
 		document.getElementById("textareaG").value = _placeholderGetAll;
 
