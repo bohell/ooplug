@@ -1,68 +1,40 @@
 (function(window, undefined){
 
-	var _placeholderInsert_Replace = "[\r\n\
-{\r\n\
-	\"Props\" : \r\n\
-	{\r\n\
-		\"Id\" : 0,\r\n\
-		\"Tag\" : \"{Document1}\",\r\n\
-		\"Lock\" : 0\r\n\
-	},\r\n\
-\r\n\
-	\"Url\" : \"https://personal.onlyoffice.com/products/files/httphandlers/filehandler.ashx?action=view&fileid=1617658&version=0&doc=aEE1OEk0THZWakI4bC9Ydm1CaFdQaGRpOFdLMURzaUFkV3cvRFlXS1dUND0_IjE2MTc2NTgi0\",\r\n\
-\r\n\
-	\"Format\" : \"docx\"\r\n\
-},\r\n\
-{\r\n\
-	\"Props\" : \r\n\
-	{\r\n\
-		\"Id\" : 1,\r\n\
-		\"Tag\" : \"{Document2}\",\r\n\
-		\"Lock\" : 1\r\n\
-	},\r\n\
-\r\n\
-	\"Url\" : \"https://personal.onlyoffice.com/products/files/httphandlers/filehandler.ashx?action=view&fileid=1617658&version=0&doc=aEE1OEk0THZWakI4bC9Ydm1CaFdQaGRpOFdLMURzaUFkV3cvRFlXS1dUND0_IjE2MTc2NTgi0\",\r\n\
-\r\n\
-	\"Format\" : \"docx\"\r\n\
-},\r\n\
-{\r\n\
-	\"Props\" : \r\n\
-	{\r\n\
-		\"Id\" : 2,\r\n\
-		\"Tag\" : \"{Document3}\",\r\n\
-		\"Lock\" : 0\r\n\
-	},\r\n\
-\r\n\
-	\"Script\" : \"var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();oParagraph.AddText(\'Hello world!\');oDocument.InsertContent([oParagraph]);\"\r\n\
-},\r\n\
-{\r\n\
-	\"Props\" : \r\n\
-	{\r\n\
-		\"Id\" : 3,\r\n\
-		\"Tag\" : \"{Document4}\",\r\n\
-		\"Lock\" : 0\r\n\
-	},\r\n\
-\r\n\
-	\"Url\" : \"https://personal.onlyoffice.com/products/files/httphandlers/filehandler.ashx?action=view&fileid=1617658&version=0&doc=aEE1OEk0THZWakI4bC9Ydm1CaFdQaGRpOFdLMURzaUFkV3cvRFlXS1dUND0_IjE2MTc2NTgi0\",\r\n\
-\r\n\
-	\"Format\" : \"docx\"\r\n\
-},\r\n\
-{\r\n\
-	\"Props\" : \r\n\
-	{\r\n\
-		\"Id\" : 4,\r\n\
-		\"Tag\" : \"{Document5}\",\r\n\
-		\"Lock\" : 0\r\n\
-	},\r\n\
-\r\n\
-	\"Script\" : \"var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();oParagraph.AddText(\'Hello world!\');oDocument.InsertContent([oParagraph]);\"\r\n\
-}\r\n\
-]";
-
-	var _placeholderRemove = "[\r\n\
-{\r\n\
-	\"InternalId\" : \"\"\r\n\
-}\r\n\
+	var _placeholderInsert_Replace = "[\r\n
+\r\n
+{\r\n
+	\"Props\" : \r\n
+	{\r\n
+		\"Id\" : 1,\r\n
+		\"Tag\" : \"InsertText\",\r\n
+		\"Lock\" : 3\r\n
+	},\r\n
+\r\n
+	\"Script\" : \"var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');oDocument.InsertContent([oParagraph]);\"\r\n
+},\r\n
+\r\n
+{\r\n
+	\"Props\" : \r\n
+	{\r\n
+		\"Id\" : 2,\r\n
+		\"Tag\" : \"InsertImg\",\r\n
+		\"Lock\" : 3\r\n
+	},\r\n
+\r\n
+	\"Script\" : \"var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph(); oDrawing = Api.CreateImage('http://img.51deng.cc/image001.png', 60 * 36000, 35 * 36000); oParagraph.AddDrawing(oDrawing);oDocument.InsertContent([oParagraph]);\"\r\n
+},\r\n
+\r\n
+{\r\n
+	\"Props\" : \r\n
+	{\r\n
+		\"Id\" : 3,\r\n
+		\"Tag\" : \"InsertDate\",\r\n
+		\"Lock\" : 3\r\n
+	},\r\n
+\r\n
+	\"Script\" : \"var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();var myDate = new Date();oParagraph.AddText(myDate.toLocaleString( ));oDocument.InsertContent([oParagraph]);\"\r\n
+}\r\n
+\r\n
 ]";
 
 	var _placeholderGetAll = "";
